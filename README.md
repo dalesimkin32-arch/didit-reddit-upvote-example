@@ -81,4 +81,4 @@ Needed some help to resolve this: the option had move in SupaBase to get the rig
 resolved login issues with slight errors in GitHub URLs on pages to use GITHUB login
 ^. can now get access to site using local deployment and log in OK.
 
-Deploying via Vetel now, aftet latest Git commit
+Deploying via Vercel now, aftet latest Git commit
