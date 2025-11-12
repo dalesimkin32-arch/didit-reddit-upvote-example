@@ -17,7 +17,7 @@ The project is a work in progress and is not yet complete.
 - [x] Nested comments (recursive lists)
 - [x] User authentication
 
-## Setup instructions
+## Setup instructions (see below for corrections)
 
 1. Fork the repository (check "copy the main branch only") and clone your fork to your local machine
 2. Run `npm install`
@@ -46,3 +46,32 @@ The project is a work in progress and is not yet complete.
 - [ ] User following
 - [ ] User feed (posts from users you follow)
 - [ ] User flair
+
+Updates and corrections by Dale:
+Ran through sett-up instructions and fixed things as went along:
+
+## Setup instructions (corrected for current build)
+
+1. Fork the repository (check "copy the main branch only") and clone your fork to your local machine :- [x]
+2. Run `npm install` :- [x] - 11 vulnerabilities (4 low, 4 moderate, 2 high, 1 critical) - ran npm audit fix --force [x] (since 'npm audit fix' did not complete the fix.)
+3. Create a `.env.local` file in the root directory and add the following environment variables: [x]
+   - `DATABASE_URL` - the URL of your Postgres database (eg. the Supabase connection string) [x]
+   - `AUTH_SECRET` - the Next Auth secret string (this can be anything at all like a password, but keep it secret!)
+   - `AUTH_GITHUB_ID` - the GitHub OAuth client ID (create yours in [Github developer settings](https://github.com/settings/developers) [x] - followed youtube video https://www.youtube.com/watch?v=H-1ozULYdyc to crated github app and create GITHUB Auth ID and GITHUBSecret
+   - `AUTH_GITHUB_SECRET` - the GitHub OAuth client secret (create this in [Github developer settings](https://github.com/settings/developers))[x]
+4. Create the database schema by running the SQL commands in `schema.sql` in your database (eg. by running the commands in Supabase Query Editor) [x]
+5. Run `npm run dev` to start the development server [x] see below
+6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the site
+
+Also at 3.: created new Supabase project (after deleting one coz have too many for free use.): "didit app"
+using SQL editor to create it using schema.sql
+
+3 and 4: Database created with Schema provide except had to adjust the last table creation: to uncomment line 79:
+-- UNIQUE(user_id, post_id, vote_type) - Schema.sql updated to be correct.
+
+5. compilation error: Next.js (14.2.33) is outdated in browser so npm i next@latest and confirmed up to date (v).
+
+now had the following in vcode terminal:
+⨯ Unable to acquire lock at /home/dales/w11assignment/didit-reddit-upvote-example/.next/dev/lock, is another instance of next dev running?
+Suggestion: If you intended to restart next dev, terminate the other process, and then try again.
+unable to fix, so VScode, seemed to be OK but other things not OK: restarting computer
