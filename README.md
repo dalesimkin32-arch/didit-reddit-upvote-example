@@ -75,3 +75,10 @@ now had the following in vcode terminal:
 ⨯ Unable to acquire lock at /home/dales/w11assignment/didit-reddit-upvote-example/.next/dev/lock, is another instance of next dev running?
 Suggestion: If you intended to restart next dev, terminate the other process, and then try again.
 unable to fix, so VScode, seemed to be OK but other things not OK: restarting computer
+
+Needed some help to resolve this: the option had move in SupaBase to get the right postgress URL for the .env.locl file
+
+resolved login issues with slight errors in GitHub URLs on pages to use GITHUB login
+^. can now get access to site using local deployment and log in OK.
+
+Deploying via Vetel now, aftet latest Git commit
